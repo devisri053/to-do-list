@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 body
 {
@@ -23,6 +23,7 @@ body
     margin:20px auto;
     overflow:visible;
 }
+
 .row ,.col
 {
     display: flex;
@@ -95,6 +96,7 @@ ul {
     margin: 12px;
     font-weight: bold;
     list-style: none;
+
 }
 
 li {
@@ -106,16 +108,27 @@ li {
     border-bottom: 1px solid #ddd; /* Separates tasks */
     background-color: rgb(255, 229, 177);
     border-radius: 8px; /* Smooth corners */
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Ensures text wraps */
+    white-space: normal; /* Allows multi-line text */
+    list-style: none;
 }
 
 /* Moves text to left and checkbox to right */
 li button{
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 18px;
+    transition: 0.2s;
     order:3;
+    background-color: transparent;
 }
-li input[type="checkbox"] {
-    order: 2; 
+li button:hover{
+    
+    opacity: 0.8;
+}
 
-}
 
 li span {
     order: 1;
@@ -127,126 +140,22 @@ li span {
 button:hover{
     background-color:cornflowerblue;
 }
-=======
-
-body
-{
-    background-color: rgb(5, 5, 48);    
-}
-.container
-{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    padding:20px;
-    overflow-y: auto;
-    white-space: nowrap;
-    background:linear-gradient(rgb(0, 247, 255),pink);
-    border-radius: 25px;
-    font-size: 20px;
-    font-family:Arial, Helvetica, sans-serif;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    margin:20px auto;
-    overflow:visible;
-}
-.row ,.col
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.todo
-{
-    font-size: larger;
-}
-.input
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-}
-#inp
-{
-    flex-direction: column;
-    height: 45px;
-    width:350px;
-    border-radius: 8px;
-    margin:10px;
-    margin-left: 5px;
-
-}
-#enter 
-{ 
-    margin:10px;
-    border-radius: 8px;
-    border-width:0;
-    padding: 4%;
-    width: 50px;
-    height: 40px;
-    font-size: 25px;
-    background-color: green;
-    color: white;
-}
-#selected , #all
-{
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-right:70px;
-    border-radius: 8px;
-    border-width:0;
-    padding:10px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-
-#low{
-    margin-top: 25px;
-    font-weight: bold;
+@media (max-width:768px){
+    .container{
+        width:100%;
+        max-width: 360px;
+        margin: 5px auto;
+    }
+    #inp
+    {
+        height: 40px;
+        width:270px;
+    }
+    #selected , #all
+    {
+        margin-left: 2px;
+        margin-top: 10px;
+        margin-right:10px;
+    }
     
 }
-.foot{
-    margin-top: 10px;
-    font-size: 20px;
-}
-ul {
-    padding: 3%;
-    border-radius: 8px;
-    margin: 12px;
-    font-weight: bold;
-    list-style: none;
-}
-
-li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px; /* Adds spacing inside */
-    margin: 5px 0; /* Adds space between tasks */
-    border-bottom: 1px solid #ddd; /* Separates tasks */
-    background-color: rgb(255, 229, 177);
-    border-radius: 8px; /* Smooth corners */
-}
-
-/* Moves text to left and checkbox to right */
-li button{
-    order:3;
-}
-li input[type="checkbox"] {
-    order: 2;  
-}
-
-li span {
-    order: 1;
-    flex-grow: 1;
-    text-align: left;
-    padding-left: 10px; /* Adds spacing from checkbox */
-}
-
->>>>>>> f7d31acafc97c1ac6a06d64f3a2adecad1f7ebf7
