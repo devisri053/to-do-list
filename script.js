@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function ()
       com_count.innerText = 0;
       total.innerText = 0;
   };
+
   add.onclick = addTask;
 
   // Add task when Enter key is pressed
